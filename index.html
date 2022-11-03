@@ -1,12 +1,12 @@
 <html>
 <head> <title> My space </title> </head>
 <body>
-<body bgcolor= #5D0000>  
+<body bgcolor= ##FFFFFF>  
 
 <font color = #FF0000 size=15>
 나만의 공간 </font>
 
- <div>Teachable Machine Image Model</div>
+<div>Teachable Machine Image Model</div>
 <button type="button" onclick="init()">Start</button>
 <div id="webcam-container"></div>
 <div id="label-container"></div>
@@ -17,7 +17,7 @@
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
     // the link to your model provided by Teachable Machine export panel
-    const URL = "https://teachablemachine.withgoogle.com/models/mwdOnJ1ExX/";
+    const URL = "https://teachablemachine.withgoogle.com/models/_zmJSs_ne/";
 
     let model, webcam, labelContainer, maxPredictions;
 
@@ -62,18 +62,9 @@
             const classPrediction =
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             labelContainer.childNodes[i].innerHTML = classPrediction;
-
-       	if(prediction[i].probability.toFixed(2) >= 0.80)
-	       {
-	               const input = document.getElementById("inputText");
-		              input.value = prediction[i].className;
-	       }
-
         }
     }
 </script>
-
-
 
 
 <br><br>
